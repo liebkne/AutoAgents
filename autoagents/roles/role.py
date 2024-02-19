@@ -165,6 +165,8 @@ class Role:
         #                                history=self.history)
 
         logger.info(f"{self._setting}: ready to {self._rc.todo}")
+        logger.info("---------------------------")
+        logger.info("%s", self._rc.important_memory)
         response = await self._rc.todo.run(self._rc.important_memory)
         # logger.info(response)
         if isinstance(response, ActionOutput):
